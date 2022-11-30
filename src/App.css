@@ -1,0 +1,287 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.App{
+  position: relative;
+}
+
+.top-content{
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.date{
+  font-weight: 500;
+}
+
+.logo-title{
+  margin-left: -9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-title img{
+  width: 50px;
+  margin-top: 12px;
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.title a{
+  text-decoration: none;
+  color: black;
+}
+
+/* .top-content #search-bar{
+  font-size: 0.8rem;
+  padding: 8px;
+  background: rgb(180, 180, 180);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+} */
+
+nav{
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+nav .nav-item a{
+  width: 120px;
+  margin: 15px;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+nav .nav-item a:hover{
+  border-radius: 4px;
+  background-color: #d8d9db;
+  color: black;
+}
+
+.sub-menu{
+  display: none;
+}
+
+nav .categories:hover .sub-menu{
+  display: block;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 25px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+nav .categories:hover .sub-menu ul{
+  list-style-type: none;
+  display: block;
+}
+
+nav .categories:hover .sub-menu ul li{
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+nav .categories:hover .sub-menu ul li a{ 
+  width: 150px;
+  padding: 10px;
+}
+
+.categories-title{
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.spinner{
+  text-align: center;
+}
+
+.container{
+  margin: auto;
+  width: 80vw;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px 20px;
+}
+
+/* NewsItem */
+.news-container{
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.8s;
+  animation: ease-in-out;
+}
+
+.news-container:hover{
+  transform: scale(1,1);
+  box-shadow: 0px 0px 15px 0px;
+}
+
+.img-container img{
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
+}
+
+.news-content{
+  text-align: justify;
+  margin: 1rem;
+  margin-top: 0.5rem;
+}
+
+.news-title{
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-body{
+  font-size: 0.7rem;
+}
+
+.news-text{
+  margin-top: 0.7rem;
+  color: #7d7e81fd;
+  font-size: 0.9rem;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+}
+
+.btn button{
+  padding: 0.5rem;
+  background-color: black;
+  border: none;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.btn a{
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.btn button:hover a{
+  color: #d8d9db;
+}
+
+.footer{
+  background-color: #d8d9db;
+  align-items: center;
+  width: 100%;
+}
+
+.images{
+    margin-top: 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.images img{
+  margin: 15px;
+  cursor: pointer;
+}
+
+.footer-text{
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .container{
+    width: 80vw;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 10px;
+  }
+}
+
+@media screen and (max-width: 600px){
+
+  .date{
+    font-size: 0.5rem;
+  }
+
+  .title{
+    font-size: 1rem;
+  }
+
+  
+  .logo-title{
+    margin-left: -5rem;
+  }
+  .logo-title img{
+    width: 30px;
+  }
+
+  .categories-title{
+    font-size: 1rem;
+  }
+
+  nav{
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .container{
+    width: 80vw;
+    grid-template-columns: 1fr;
+    gap: 20px 10px;
+  }
+
+  .news-container{
+    width: 70vw;
+  }
+
+  .img-container img{
+    height: 150px;
+  }
+
+  .news-title{
+    font-size: 0.7rem;
+  }
+  
+  .news-body{
+    font-size: 0.6rem;
+  }
+  
+  .news-text{
+    font-size: 0.5rem;
+  }
+
+  .btn button{
+    padding: 0.3rem;
+    font-size: 0.7rem;
+  }
+  
+}
